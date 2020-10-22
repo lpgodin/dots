@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/liam/.oh-my-zsh'
 let g:netrw_dirhist_6='/home/liam/Downloads/HW3Godin/src'
 let g:netrw_dirhist_5='/'
 let g:netrw_dirhist_4='/home'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/home/liam/Downloads/HW3Code'
 let g:netrw_dirhist_0='/home/liam/Downloads/HW3Code/2020HW3starter'
 let g:netrw_dirhist_9='/home/liam/Downloads/HW3Code'
 let g:netrw_dirhist_8='/home/liam/Downloads/HW3Code/2020HW3starter'
-let g:netrw_dirhist_7='/home/liam/Downloads/HW3Code'

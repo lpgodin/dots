@@ -1,45 +1,41 @@
+" How I Like Neovim at the moment
+
+" Extra Keymappings
+" Assigns CTRL + n to open/ close NERDTREE
+map <C-n> :CHADopen<CR>
+" Assigns CTRL + g to open/ close Goyo
+map <C-g> :Goyo<CR>
+" Assigns F5 to convert .rmd files to document
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
-set number relativenumber
-
-" Assigns CTRL + n to open/ close NERDTREE
-map <C-n> :NERDTreeToggle<CR>
-
-let g:rainbow_active=1
-" specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
+" Plugin management
 call plug#begin('~/.config/nvim/autoload/plug.vim')
 
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
-" Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
-
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
-
+" Editing plugs
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'zxqfl/tabnine-vim'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 
+" Visual/ Theming Plugins
+Plug 'overcache/NeoSolarized'
 Plug 'morhetz/gruvbox'
-
 Plug 'dracula/vim', { 'as': 'dracula' } 
-
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Rainbow-Parenthesis'
-
+Plug 'junegunn/goyo.vim'
 " Initialize plugin system
 call plug#end()
-colorscheme dracula
 
+" Neovim settings
+let g:rainbow_active=1
+set number relativenumber
+syntax enable
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+" Truecolor <3
 set termguicolors
