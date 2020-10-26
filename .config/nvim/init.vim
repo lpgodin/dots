@@ -10,8 +10,7 @@ Plug 'vim-pandoc/vim-rmarkdown'
 
 " Editing Plugins
 Plug 'zxqfl/tabnine-vim'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'preservim/nerdtree'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'dense-analysis/ale'
@@ -28,13 +27,6 @@ Plug 'junegunn/goyo.vim'
 
 " Initialize plugin system
 call plug#end()
-
-" Deoplete config
-let g:deoplete#auto_complete_start_length = 2
-
-" Use smartcase
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#sources = {}
 
 " NERDTree config
 " Opens NERDTree by default
