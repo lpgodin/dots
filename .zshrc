@@ -8,7 +8,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/liam/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Theme - powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -44,7 +44,6 @@ alias notes='cd ~/Documents/Notes'
 alias fetch='neofetch'
 alias sigma='cd ~/sigmapi/sigmapi-web/sigmapiweb'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
-alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 alias cs='cd ~/IdeaProjects/CS2223'
 alias planner='vi ~/Documents/dailyplanner.md'
 
