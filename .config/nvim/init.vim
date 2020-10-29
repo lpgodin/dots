@@ -61,19 +61,6 @@ let g:ale_linters = {
       \  'java': ['javac']
       \ }
 
-"Ultisnips config
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" Since we are already using Deoplete, and using tab with both doesn't work nice use <c-j> instead
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
-
 "Ctrl-b to open Tagbar
 map <C-b> :TagbarToggle<CR>
 
@@ -86,8 +73,6 @@ map <C-g> :Goyo<CR>
 
 " Assigns F5 to convert .rmd files to document
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-
-let g:gruvbox_contrast_dark = 'hard'
 
 " Neovim settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab

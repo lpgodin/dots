@@ -8,7 +8,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/liam/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Theme - powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -39,22 +39,15 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias vi='nvim'
 alias vim='nvim'
-alias zshrc='nvim ~/.zshrc'
-alias notes='cd ~/Documents/Notes'
+alias zshrc='nvim $HOME/.zshrc'
+alias notes='cd $HOME/Documents/Notes'
 alias fetch='neofetch'
-alias sigma='cd ~/sigmapi/sigmapi-web/sigmapiweb'
-alias nvimrc='nvim ~/.config/nvim/init.vim'
-alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
-alias cs='cd ~/IdeaProjects/CS2223'
-alias planner='vi ~/Documents/dailyplanner.md'
-
-function cd_up() {
-	cd $(printf "%0.s../" $(seq 1 $1 ));
-}
-alias 'cd.. '='cd_up'
+alias nvimrc='nvim $HOME/.config/nvim/init.vim'
+alias cs='cd $HOME/Dev/CS2223'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export PAGER= 'nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
