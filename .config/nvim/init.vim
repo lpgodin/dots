@@ -67,12 +67,14 @@ map <C-b> :TagbarToggle<CR>
 " Java compilation
 autocmd FileType java set makeprg=javac\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
-
+autocmd Filetype java map <F5> :!javac<space>%<space>-d<space>out/<enter>
+autocmd Filetype java map <F6> :!java<space>%<enter>
 " Assigns CTRL + g to open/ close Goyo
 map <C-g> :Goyo<CR>
 
+
 " Assigns F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '../finished')"<space>\|<space>R<space>--vanilla<enter>
 
 " Neovim settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
