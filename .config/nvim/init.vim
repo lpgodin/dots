@@ -67,7 +67,9 @@ map <C-b> :TagbarToggle<CR>
 " Java compilation
 autocmd FileType java set makeprg=javac\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
-autocmd Filetype java map <F5> :!javac<space>%<space>-d<space>out/<enter>
+" Assigns F5 to compiling java files
+autocmd Filetype java map <F5> :!javac<space>%<enter>
+" Assigns F6 to running compiled Java file
 autocmd Filetype java map <F6> :!java<space>%<enter>
 " Assigns CTRL + g to open/ close Goyo
 map <C-g> :Goyo<CR>
