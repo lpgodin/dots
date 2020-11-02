@@ -44,6 +44,7 @@ alias notes='cd $HOME/Documents/Notes'
 alias fetch='neofetch'
 alias nvimrc='nvim $HOME/.config/nvim/init.vim'
 alias cs='cd $HOME/Dev/CS2223'
+alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
