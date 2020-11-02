@@ -2,7 +2,6 @@
 
 " Plugin management
 call plug#begin('~/.config/nvim/autoload/plug.vim')
-
 " Note Taking Plugins
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -24,21 +23,48 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'junegunn/goyo.vim'
-
 " Initialize plugin system
 call plug#end()
+
+" KEYMAPPING
+" Assigns CTRL + n to open/ close NERDTREE
+map <C-n> :NERDTreeToggle<CR>
+"Ctrl-b to open Tagbar
+map <C-b> :TagbarToggle<CR>
+" Assigns CTRL + g to open/ close Goyo
+map <C-g> :Goyo<CR>
+
+" Java compilation
+autocmd FileType java set makeprg=javac\ % " Sets javac as compiler for java
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%# " Sets error format for compilation errors
+" Maps F5 to compile current file
+autocmd Filetype java map <F5> :!javac<space>%<enter> 
+" Maps F6 to run current file
+autocmd Filetype java map <F6> :!java<space>%<enter> 
+
+" JavaComplete + java filetype complete config
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java JCEnable
+
+" Maps F5 to convert .rmd files to document
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '../finished')"<space>\|<space>R<space>--vanilla<enter>
+
+" Neovim settings
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+let g:rainbow_active=1
+set number relativenumber
+syntax enable
+set background=dark
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+" Truecolor <3
+set termguicolors
 
 " NERDTree config
 " Opens NERDTree by default
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
-" Assigns CTRL + n to open/ close NERDTREE
-map <C-n> :NERDTreeToggle<CR>
-
-" JavaComplete + java filetype complete config
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType java JCEnable
 
 " Ale for code checking
 " Shorten error/warning flags
@@ -60,29 +86,4 @@ let g:ale_linters = {
       \  'python': ['pylint'],
       \  'java': ['javac']
       \ }
-
-"Ctrl-b to open Tagbar
-map <C-b> :TagbarToggle<CR>
-
-" Java compilation
-autocmd FileType java set makeprg=javac\ %
-set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
-autocmd Filetype java map <F5> :!javac<space>%<space>-d<space>out/<enter>
-autocmd Filetype java map <F6> :!java<space>%<enter>
-" Assigns CTRL + g to open/ close Goyo
-map <C-g> :Goyo<CR>
-
-
-" Assigns F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '../finished')"<space>\|<space>R<space>--vanilla<enter>
-
-" Neovim settings
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-let g:rainbow_active=1
-set number relativenumber
-syntax enable
-set background=dark
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
-" Truecolor <3
-set termguicolors
+" Job's done
