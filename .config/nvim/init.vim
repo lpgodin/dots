@@ -40,7 +40,7 @@ autocmd Filetype java map <F5> :!javac<space>%<enter>
 autocmd Filetype java map <F6> :!java<space>%<enter>
 
 " Assigns F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$HOME/Documents/Notes/finished/BTERM)"<space>\|<space>R<space>--vanilla<enter>
 
 "Ctrl-b to open Tagbar
 map <C-b> :TagbarToggle<CR>
