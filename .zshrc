@@ -48,6 +48,8 @@ alias nvimrc='nvim $HOME/.config/nvim/init.vim'
 alias cs='cd $HOME/Dev/CS2223'
 alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 
+alias makenote='f() {cp ~/Documents/Notes/rmd/template.rmd $1.rmd && vi $1.rmd};f'
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER= 'nvim'
