@@ -45,17 +45,6 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 "Ctrl-b to open Tagbar
 map <C-b> :TagbarToggle<CR>
 
-" Neovim settings
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-let g:rainbow_active=1
-set number relativenumber
-syntax enable
-set background=dark
-colorscheme NeoSolarized
-let g:airline_theme='solarized'
-" Truecolor <3
-set termguicolors
-
 " NERDTree config
 " Opens NERDTree by default
 autocmd StdinReadPre * let s:std_in=1
@@ -89,3 +78,14 @@ let g:ale_linters = {
       \  'python': ['pylint'],
       \  'java': ['javac']
       \ }
+
+" Neovim settings
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+let g:rainbow_active=1
+set number relativenumber
+syntax enable
+set background=light
+colorscheme NeoSolarized
+let g:airline_theme='solarized'
+" Truecolor <3
+set termguicolors
