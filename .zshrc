@@ -10,6 +10,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export FINISHED="$HOME/Documents/Notes/finished/BTERM"
+
 # Theme - powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
 SOLARIZED_THEME="light"
@@ -45,6 +47,8 @@ alias fetch='neofetch'
 alias nvimrc='nvim $HOME/.config/nvim/init.vim'
 alias cs='cd $HOME/Dev/CS2223'
 alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
+
+alias makenote='f() {cp ~/Documents/Notes/rmd/template.rmd $1.rmd && vi $1.rmd};f'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
