@@ -62,7 +62,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java JCEnable
 
 " Maps F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '../finished')"<space>\|<space>R<space>--vanilla<enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$HOME/Documents/Notes/finished')"<space>\|<space>R<space>--vanilla<enter>
 
 " NERDTree config
 " Opens NERDTree by default
