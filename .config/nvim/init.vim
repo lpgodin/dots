@@ -1,7 +1,6 @@
 " How I Like Neovim at the moment
 
-" Plugin management
-call plug#begin('~/.config/nvim/autoload/plug.vim')
+" Plugin management call plug#begin('~/.config/nvim/autoload/plug.vim')
 " Note Taking Plugins
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -37,32 +36,18 @@ map <C-g> :Goyo<CR>
 " Java compilation
 autocmd FileType java set makeprg=javac\ % " Sets javac as compiler for java
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%# " Sets error format for compilation errors
+
+" JavaComplete + java filetype complete config
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java JCEnable
+
 " Maps F5 to compile current file
 autocmd Filetype java map <F5> :!javac<space>%<enter> 
 " Maps F6 to run current file
 autocmd Filetype java map <F6> :!java<space>%<enter> 
 
 " Assigns F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$HOME/Documents/Notes/finished/BTERM')"<space>\|<space>R<space>--vanilla<enter>
-
-"Ctrl-b to open Tagbar
-map <C-b> :TagbarToggle<CR>
-
-" NERDTree config
-" Opens NERDTree by default
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeShowHidden=1
-
-" Java compilation
-autocmd FileType java set makeprg=javac\ %
-set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
-" JavaComplete + java filetype complete config
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType java JCEnable
-
-" Maps F5 to convert .rmd files to document
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$HOME/Documents/Notes/finished')"<space>\|<space>R<space>--vanilla<enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$FINISHED')"<space>\|<space>R<space>--vanilla<enter>
 
 " NERDTree config
 " Opens NERDTree by default

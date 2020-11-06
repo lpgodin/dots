@@ -10,7 +10,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export FINISHED="$HOME/Documents/Notes/finished/BTERM"
+export FINISHED="$HOME/Documents/Notes/finished/BTERM/"
 
 # Theme - powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
