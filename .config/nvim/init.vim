@@ -41,16 +41,6 @@ set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%# " Sets error format for compilation e
 autocmd Filetype java map <F5> :!javac<space>%<enter> 
 " Maps F6 to run current file
 autocmd Filetype java map <F6> :!java<space>%<enter> 
-" Assigns CTRL + n to open/ close NERDTREE
-map <C-n> :NERDTreeToggle<CR>
-
-" Assigns CTRL + g to open/ close Goyo
-map <C-g> :Goyo<CR>
-
-" Assigns F5 to compiling java files
-autocmd Filetype java map <F5> :!javac<space>%<enter>
-" Assigns F6 to running compiled Java file
-autocmd Filetype java map <F6> :!java<space>%<enter>
 
 " Assigns F5 to convert .rmd files to document
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '$HOME/Documents/Notes/finished/BTERM')"<space>\|<space>R<space>--vanilla<enter>
@@ -63,7 +53,6 @@ map <C-b> :TagbarToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
->>>>>>> 91a38d7e930bc22549198179e888eaaeb9780669
 
 " Java compilation
 autocmd FileType java set makeprg=javac\ %
@@ -74,17 +63,6 @@ autocmd FileType java JCEnable
 
 " Maps F5 to convert .rmd files to document
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', output_dir = '../finished')"<space>\|<space>R<space>--vanilla<enter>
-
-" Neovim settings
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-let g:rainbow_active=1
-set number relativenumber
-syntax enable
-set background=dark
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
-" Truecolor <3
-set termguicolors
 
 " NERDTree config
 " Opens NERDTree by default
@@ -112,15 +90,16 @@ let g:ale_linters = {
       \  'python': ['pylint'],
       \  'java': ['javac']
       \ }
-" Job's done
 
 " Neovim settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let g:rainbow_active=1
 set number relativenumber
 syntax enable
-set background=light
-colorscheme NeoSolarized
-let g:airline_theme='solarized'
+set background=dark
+colorscheme dracula
+let g:airline_theme='dracula'
 " Truecolor <3
 set termguicolors
+
+" Job's done
