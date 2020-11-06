@@ -5,16 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-export FINISHED="$HOME/Documents/Notes/finished/BTERM/"
-
 # Theme - powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
-SOLARIZED_THEME="light"
+SOLARIZED_THEME="dark"
+
+# Pathing
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export FINISHED="$HOME/Documents/Notes/finished/BTERM/"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -26,6 +25,7 @@ plugins=(
 	zsh-vim-mode
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+        k
 )
 
 source $ZSH/oh-my-zsh.sh
