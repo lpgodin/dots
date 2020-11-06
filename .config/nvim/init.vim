@@ -1,6 +1,7 @@
 " How I Like Neovim at the moment
 
-" Plugin management call plug#begin('~/.config/nvim/autoload/plug.vim')
+" Plugin management 
+call plug#begin('~/.config/nvim/autoload/plug.vim')
 " Note Taking Plugins
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
