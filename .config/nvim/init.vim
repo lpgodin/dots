@@ -19,6 +19,7 @@ Plug 'majutsushi/tagbar'
 Plug 'overcache/NeoSolarized'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' } 
+Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Rainbow-Parenthesis'
@@ -82,10 +83,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let g:rainbow_active=1
 set number relativenumber
 syntax enable
+set termguicolors " Truecolor <3
 set background=dark
-colorscheme dracula
-let g:airline_theme='dracula'
-" Truecolor <3
-set termguicolors
+colorscheme onedark
+let g:airline_theme='onedark'
 
 " Job's done

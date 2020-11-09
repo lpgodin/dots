@@ -10,10 +10,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 SOLARIZED_THEME="dark"
 
 # Pathing
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/bin/nvim
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export FINISHED="$HOME/Documents/Notes/finished/BTERM/"
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -32,27 +33,23 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+ export VISUAL=/usr/bin/nvim
+ export EDITOR=/usr/bin/nvim
+
 # aliases
 alias vi='nvim'
 alias vim='nvim'
-alias zshrc='nvim $HOME/.zshrc'
-alias notes='cd $HOME/Documents/Notes'
 alias fetch='neofetch'
+alias ra='ranger'
+alias zshrc='nvim $HOME/.zshrc'
 alias nvimrc='nvim $HOME/.config/nvim/init.vim'
+alias termrc='nvim $HOME/.config/termite/config'
+alias notes='cd $HOME/Documents/Notes'
 alias cs='cd $HOME/Dev/CS2223'
 alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 
+# make a .rmd file with a filename of parameter given after alias call
 alias makenote='f() {cp ~/Documents/Notes/rmd/template.rmd $1.rmd && vi $1.rmd};f'
-
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER= 'nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
