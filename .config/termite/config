@@ -1,0 +1,153 @@
+[options]
+allow_bold = true
+clickable_url = true
+font = Hasklug Nerd Font 10
+scrollback_lines = 10000
+hyperlinks = false
+
+
+[colors]
+
+# one dark
+# special
+foreground      = #abb2bf
+foreground_bold = #abb2bf
+cursor          =
+background      = #282c34
+
+# black
+color0  = #282c34
+color8  = #5c6370
+
+# red
+color1  = #e06c75
+color9  = #be5046
+
+# green
+color2  = #98c379
+color10 = #7a9f60
+
+# yellow
+color3  = #e5c07b
+color11 = #d19a66
+
+# blue
+color4  = #61afef
+color12 = #3b84c0
+
+# magenta
+color5  = #c678dd
+color13 = #9a52af
+
+# cyan
+color6  = #56b6c2
+color14 = #3c909b
+
+# white
+color7  = #abb2bf
+color15 = #828997
+
+vim: ft=dosini cms=#%s
+
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+#
+## special
+#foreground      = #f8f8f2
+#foreground_bold = #f8f8f2
+#cursor          = #f8f8f2
+#background      = rgba(40, 42, 54, 1)
+#
+## black
+#color0  = #000000
+#color8  = #4d4d4d
+#
+## red
+#color1  = #ff5555
+#color9  = #ff6e67
+#
+## green
+#color2  = #50fa7b
+#color10 = #5af78e
+#
+## yellow
+#color3  = #f1fa8c
+#color11 = #f4f99d
+#
+## blue
+#color4  = #bd93f9
+#color12 = #caa9fa
+#
+## magenta
+#color5  = #ff79c6
+#color13 = #ff92d0
+#
+## cyan
+#color6  = #8be9fd
+#color14 = #9aedfe
+#
+## white
+#color7  = #bfbfbf
+#color15 = #e6e6e6
+
+# Solarized dark color scheme
+
+#[colors]
+#foreground = #839496
+#foreground_bold = #eee8d5
+##foreground_dim = #888888
+#background = #002b36
+#cursor = #93a1a1
+#
+## if unset, will reverse foreground and background
+##highlight = #839496
+#
+## colors from color0 to color254 can be set
+#color0 = #073642
+#color1 = #dc322f
+#color2 = #859900
+#color3 = #b58900
+#color4 = #268bd2
+#color5 = #d33682
+#color6 = #2aa198
+#color7 = #eee8d5
+#color8 = #002b36
+#color9 = #cb4b16
+#color10 = #586e75
+#color11 = #657b83
+#color12 = #839496
+#color13 = #6c71c4
+#color14 = #93a1a1
+#color15 = #fdf6e3
+
+#
+# Ayu Dark
+# Dark version with Mirage as colors 8-15
+#
+
+#[colors]
+#cursor = #ffcc66
+#cursor_foreground = #ffcc66
+#
+#foreground = #b3b1ad
+#foreground_bold = #b3b1ad
+#background = rgba(10, 14, 20, 1)
+#
+#color0 = #0a0e14
+#color1 = #ff3333
+#color2 = #c2d94c
+#color3 = #ffb454
+#color4 = #59c2ff
+#color5 = #f07178
+#color6 = #95e6cb
+#color7 = #ffffff
+#color8 = #1f2430
+#color9 = #ff3333
+#color10 = #bae67e
+#color11 = #ffd580
+#color12 = #73d0ff
+#color13 = #f28779
+#color14 = #95e6cb
+#color15 = #ffffff
