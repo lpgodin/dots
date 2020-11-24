@@ -45,7 +45,9 @@ alias zshrc='nvim $HOME/.zshrc'
 alias nvimrc='nvim $HOME/.config/nvim/init.vim'
 alias termrc='nvim $HOME/.config/termite/config'
 alias notes='cd $HOME/Documents/Notes'
-alias cs='cd $HOME/Dev/CS2223'
+alias dev='cd $HOME/Dev'
+alias cs='code $HOME/Dev/CS2223'
+alias rbe='code $HOME/Dev/RBE2002'
 alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 
 # make a .rmd file with a filename of parameter given after alias call

@@ -1,7 +1,7 @@
 [options]
 allow_bold = true
 clickable_url = true
-font = Hasklug Nerd Font 10
+font = Victor Mono 10
 scrollback_lines = 10000
 hyperlinks = false
 

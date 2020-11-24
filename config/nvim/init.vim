@@ -11,14 +11,14 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'zxqfl/tabnine-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'preservim/nerdtree'
-Plug 'artur-shaik/vim-javacomplete2'
-Plug 'dense-analysis/ale'
-Plug 'majutsushi/tagbar'
+" Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'dense-analysis/ale'
+" Plug 'majutsushi/tagbar'
 
 " Visual/ Theming Plugins
-Plug 'overcache/NeoSolarized'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' } 
+" Plug 'overcache/NeoSolarized'
+" Plug 'morhetz/gruvbox'
+" Plug 'dracula/vim', { 'as': 'dracula' } 
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
