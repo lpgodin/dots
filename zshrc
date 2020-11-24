@@ -49,7 +49,6 @@ alias noteup='./update.sh'
 alias dev='cd $HOME/Dev'
 alias cs='code $HOME/Dev/CS2223'
 alias rbe='code $HOME/Dev/RBE2002'
-alias dots='git --git-dir=/home/liam/.dots.git/ --work-tree=/home/liam'
 
 # make a .rmd file with a filename of parameter given after alias call
 alias makenote='f() {cp ~/Documents/Notes/rmd/template.rmd $1.rmd && vi $1.rmd};f'
