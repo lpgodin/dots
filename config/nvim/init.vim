@@ -16,10 +16,10 @@ Plug 'preservim/nerdtree'
 " Plug 'majutsushi/tagbar'
 
 " Visual/ Theming Plugins
-" Plug 'overcache/NeoSolarized'
+Plug 'overcache/NeoSolarized'
 " Plug 'morhetz/gruvbox'
 " Plug 'dracula/vim', { 'as': 'dracula' } 
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Rainbow-Parenthesis'
@@ -84,8 +84,8 @@ let g:rainbow_active=1
 set number relativenumber
 syntax enable
 set termguicolors " Truecolor <3
-set background=dark
-colorscheme onedark
-let g:airline_theme='onedark'
+set background=light
+colorscheme NeoSolarized
+let g:airline_theme='solarized'
 
 " Job's done

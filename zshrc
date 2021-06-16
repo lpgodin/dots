@@ -13,7 +13,7 @@ SOLARIZED_THEME="dark"
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/bin/nvim
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export FINISHED="$HOME/Documents/Notes/finished/BTERM/"
+export FINISHED="$HOME/Documents/Notes/finished/CTERM/"
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # Uncomment the following line to enable command auto-correction.
@@ -49,6 +49,7 @@ alias noteup='./update.sh'
 alias dev='cd $HOME/Dev'
 alias cs='code $HOME/Dev/CS2223'
 alias rbe='code $HOME/Dev/RBE2002'
+alias logisim='java -jar $HOME/Downloads/logisim-generic-2.7.1.jar'
 
 # make a .rmd file with a filename of parameter given after alias call
 alias makenote='f() {cp ~/Documents/Notes/rmd/template.rmd $1.rmd && vi $1.rmd};f'
